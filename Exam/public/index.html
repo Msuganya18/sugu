@@ -1,55 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/icon?family=Material+Icons"
-/>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121111;
+            color: hsl(0, 17%, 93%);
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        nav {
+            background-color: #302f2f;
+            overflow: hidden;
+            padding: 10px 0;
+            position: fixed; 
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            float: left;
+            color: hsl(0, 17%, 93%);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        nav a:hover {
+            background-color: #575555;
+            color: white;
+        }
+        nav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+        
+   .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            padding: 20px;
+            padding-top: 70px;
+           
+        }
+      
+        .section {
+            background: #504e4e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(175, 166, 166, 0.1);
+            flex: 1 1 calc(33.333% - 40px);
+            box-sizing: border-box;
+        }
+        .section:hover {
+            background-color:  #302f2f;
+         transition: background-color 2s, width 3s , height 2 s;
+        }
+        .section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-/>
+        
+        .header {
+            text-align: center;
+            flex: 1 1 100%;
+            margin-bottom: 40px;
+        }
+        .header img {
+            width: 250px;
+            height: 250px;
+            border-radius: 100%;
+            object-fit: cover;
+            margin-bottom:50px;
+            margin-top: 100px;
+        }
+        .header img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 100px white;
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+        .header h1 {
+            margin: 0 0 10px;
+            font-size: 2em ; 
+          
+            text-shadow: 2px 2px 5px rgb(171, 166, 166);
+            transition: font-size 0.5s, color 0.5s;
+        }
+        
+        .header p {
+            margin: 0 0 20px;
+            color: #7b7373;
+        }
+        .about, .project {
+            text-align: center;
+        }
+        .about h2, .project h2 {
+            margin: 20px 0;
+           
+        }
+        .project p {
+            margin: 10px 0;
+            
+           
+        }
+        
+        .contact {
+            text-align: center;
+            flex: 1 1 100%;
+        }
+        .contact h2 {
+            margin-bottom: 20px;
+        }
+        .contact a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #676161;
+            color: rgb(253, 251, 251);
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .contact:hover {
+            background-color: #302f2f;
+            transition: background-color 2s, width 3s 5s, height 2 s;
+        }
+        .footer {
+            text-align: center;
+            flex: 1 1 100%;
+            margin-top: 20px;
+            padding: 20px;
+            background: #585555;
+            color: white;
+            border-radius: 10px;
+        }
+        .footer:hover 
+        {
+            background-color: #302f2f;
+           
+        }
+        
+        button {
+            background-color: #534e4e;
+            color: rgb(65, 46, 46);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button a {
+            color: rgb(18, 15, 15);
+            text-decoration: none;
+        }
+        button:hover {
+            background-color: #706767;
+            transition: background-color 0.3s;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#internship">Internship</a>
+        <a href="#certification">Certification</a>
+        <a href="#skills">Skills</a>
+        <a href="#profile">Profile</a>
+        <a href="#projects">Projects</a>
+       
+        <a href="#contact">Contact</a>
+    </nav>
+   
+    <div class="container">
+      
+        <div class="header">
+          
+            <img src="sugu.jpg" alt="Profile Picture" width="100%";>
+            <h1>I'm Suganya M</h1>
+            <p>Web Developer</p>
+        </div>
 
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+        <div class="section about" id="about">
+           
+            <h2>About Me</h2>
+            
+            <p> Currently pursuing Electronics and communication in Sri Krishna College of Technology,
+                <p>
+                I have strong [skills] and am a quick learner.
+                
+                I am actively seeking core job opportunities to apply my skills and contribute to impactful projects.
+            
+            </p>
+            </p>
+        </div>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+        <div class="section project" id="internship">
+         
+            <h2>Internship</h2>
+           
+            <p></p>
+            <p> I have completed the Internship and Recieved a certificate in Agile in COMORINS TECHNOLOGIES,
+                <p>
+                In ALO INFOTECH about Full Stack Development.
+            </p>
+            </p>
+            <button><a href="C:\Users\sugan\Downloads\Suganya internship certificate.pdf">View Certificate</a> </button>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+        </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+        <div class="section project" id="Certification">
+          
+            <h2>Certification</h2>
+            
+            <p> I have completed some coureses in coursera 
+                <p>
+                Mathlab 
+            </p>
+            <p>
+                cisco 
+            </p>
+            <p>
+                Infosys.
+            </p>
+         </p>
+                     
+            <button><a href="C:\Users\sugan\Downloads\arudino.pdf">View Certificate</a> </button>
+
+        </div>
+
+        <div class="section project" id="skills">
+         
+            <h2>Skills</h2>
+        
+            <p> Have excellent communication skill in English.
+                <p>
+                Designing web applications using HTML,CSS and JAVASCRIPT
+            </p>
+            <p>
+                Programming for problem solving C++
+            </p>
+            <p>
+                JAVA Fundamentals
+            </p>
+            </p>
+               
+            <button><a href="C:\Users\sugan\OneDrive\Documents\INTRO TO HTML.pdf">View Certificate</a> </button>
+
+        </div>
+
+        <div class="section project" id="Profile">
+           
+            <h2>Profile</h2>
+            <p>Visit <a href=https://www.linkedin.com/in/suganya-m-513bb8305/ target="_blank" title="Go to Example Website">My Linkedin</a>
+    <img src="https://sguru.org/wp-content/uploads/2018/02/Logo-LinkedIn-Round.png" alt="Inline Image" style="width: 25px; height: 25px;">
+</p>
+<p>Visit <a href="https://github.com/Msuganya18/sugu" target="_blank" title="Go to Example Website">GitHub</a> for more information.</p>
+
+</p>
+
+
+        </div>
+
+        <div class="section project" id="projects">
+           
+            <h2>Project(software)</h2>
+            
+            <p> I have completed a project using React.js its a Travel and Tourism Website </p>
+            <button><a href="C:\Users\sugan\OneDrive\Documents\aaaaa.html">View Image</a> </button>
+        </div>
+
+      
+        <div class="contact" id="contact">
+            
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, please email me at <a href="mailto:sugan18112004@gmail.com">sugan18112004@gmail.com</a>.</p>
+            
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Suganya M</p>
+        </div>
+    </div>
+</body>
 </html>
